@@ -28,6 +28,7 @@ export default function FetchData(query, pageNumber) {
         })
         .catch(e=>{
             if (Axios.isCancel(e)) return
+            console.log(e)
         })
         return()=>cancel()
     },[query, pageNumber])
